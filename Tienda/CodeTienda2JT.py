@@ -1,10 +1,8 @@
 """
-Título de práctica: breve descripción
+Título de práctica: Tienda 2
 
-Descripción extendida del programa
-
-Autor: ElAutor <el@correo>
-Fecha: 2025-02-01
+Autor: Juan Torres <jetorress@academia.usbbog.edu.co>
+Fecha: 07/03/2025
 """
 
 class Producto:
