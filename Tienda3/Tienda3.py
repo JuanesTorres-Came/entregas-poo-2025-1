@@ -67,7 +67,40 @@ def mostrar_productos_juntos(productos):
     print(f"{'Clasificación':<20} {'Precio Total':<15}")
     for clasificacion, precio_total in clasificaciones.items():
         print(f"{clasificacion:<20} {precio_total:<5}pesos")
+
+
+def calcula_precio_productos(productos):
+    cantidades= {}
+    for producto in productos:
+        #multiplicacion cantidad-productos por precio-productos
+        producto.precio= producto.cantidad*producto.precio
+        if producto.cantidad in cantidades:
+                cantidades[producto.cantidad] += producto.precio
+        else:
+                cantidades[producto.cantidad] = producto.precio
+    #se imprimen los valores para que aparezcan en la tabla
+    print("\n Total en inventario")
+    print(f"{'Cantidad productos':<20} {'Precio Productos':15}")
+    for cantidad, precio_productos in cantidades.items():
+        print(f"{cantidad:<20} {precio_productos:<5} pesos")
         
+
+def calcula_precio_por_5(productos):
+    cantidades= {}
+    for producto in productos:
+        #multiplicacion cantidad-productos por precio-productos
+        producto.precio= producto.precio*5
+        if producto.cantidad in cantidades:
+                cantidades[producto.cantidad] += producto.precio
+        else:
+                cantidades[producto.cantidad] = producto.precio
+    #se imprimen los valores para que aparezcan en la tabla
+    print("\n Total en inventario")
+    print(f"{'Cantidad productos':<20} {'Precio Productos':15}")
+    for cantidad, precio_productos in cantidades.items():
+        print(f"{cantidad:<20} {precio_productos:<5} pesos")
+
+
         
 def main():
     nproductos = int(input("cuantos productos va a ingresar?: "))
@@ -81,7 +114,8 @@ def main():
     # Se muestran los productos que se ingresaron en formato de tabla
     mostrar_productos(productos)
     mostrar_productos_juntos(productos)
-
-            
+    calcula_precio_productos(productos)
+    calcula_precio_por_5(productos)
+                
 if __name__ == "__main__":
     main()
