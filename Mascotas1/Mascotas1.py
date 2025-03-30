@@ -2,7 +2,7 @@
 Título de práctica: Mascotas 1
 
 Autor: Juan Torres <jetorress@academia.usbbog.edu.co>
-Fecha: 07/03/2025
+Fecha: 29/03/2025
 """
 import datetime
 class Mascota:
@@ -19,18 +19,24 @@ class Mascota:
                 f"{self.clase}",
                 f"{self.nombre}",
                 f"{self.edad}",
-                f"{self.raza}",
+                f"{self.raza}", 
                 f"{self.fecha_ingreso.strftime('%Y-%m-%d')}"]
 
 def ingresar_mascotas():
         #los datos que ingresara el cliente
+    while True:
         clase = input ("ingrese la clase de la mascota: ")
-        nombre = input("Ingrese el nombre de la mascota: ")
-        edad = int(input(f"La edad de {nombre} es: "))
-        raza = input(f"la raza de {nombre} es: ")
-        fecha_ingreso = datetime.date.today()
+        if clase == "perro" or clase == "gato":
+            print("es valida esta clase")
+            nombre = input("Ingrese el nombre de la mascota: ")
+            edad = int(input(f"La edad de {nombre} es: "))
+            raza = input(f"la raza de {nombre} es: ")
+            fecha_ingreso = datetime.date.today()
+            return Mascota(clase, nombre, edad, raza, fecha_ingreso)
+        else:
+            print("La clase no es valida")
     
-        return Mascota(clase, nombre, edad, raza, fecha_ingreso)
+        
     
 def mostrar_mascotas(mascotas):
         #encabezado de la tabla ("titulos")

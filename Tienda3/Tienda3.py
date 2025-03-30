@@ -1,5 +1,5 @@
 """
-Título de práctica: Tienda 2
+Título de práctica: Tienda 3
 
 Autor: Juan Torres <jetorress@academia.usbbog.edu.co>
 Fecha: 07/03/2025
