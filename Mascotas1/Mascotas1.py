@@ -2,7 +2,7 @@
 Título de práctica: Mascotas 1
 
 Autor: Juan Torres <jetorress@academia.usbbog.edu.co>
-Fecha: 29/03/2025
+Fecha: 30/03/2025
 """
 import datetime
 class Mascota:
@@ -21,7 +21,10 @@ class Mascota:
                 f"{self.edad}",
                 f"{self.raza}", 
                 f"{self.fecha_ingreso.strftime('%Y-%m-%d')}"]
-
+class Perro(Mascota):
+    pass
+class Gato(Mascota):
+    pass
 def ingresar_mascotas():
         #los datos que ingresara el cliente
     while True:
@@ -34,7 +37,7 @@ def ingresar_mascotas():
             fecha_ingreso = datetime.date.today()
             return Mascota(clase, nombre, edad, raza, fecha_ingreso)
         else:
-            print("La clase no es valida")
+            print("La clase no es valida, intente de nuevo")
     
         
     
