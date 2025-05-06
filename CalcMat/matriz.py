@@ -1,3 +1,9 @@
+"""
+Título de práctica: Mascotas 1
+
+Autor: Juan Torres <jetorress@academia.usbbog.edu.co>
+Fecha: 04/05/2025
+"""
 class Matriz:
     def __init__(self, valores):
         if len(valores) != 2 or any(len(fila) != 2 for fila in valores):
@@ -18,7 +24,7 @@ class Matriz:
         ]
         return Matriz(resultado)
 
-    def __matmul__(self, otra):  # operador @ para multiplicación de matrices
+    def __matmul__(self, otra):  #operador para la multiplicación de matrices
         resultado = [
             [
                 self.valores[i][0] * otra.valores[0][j] + self.valores[i][1] * otra.valores[1][j]
@@ -45,10 +51,10 @@ def pedir_matriz(nombre):
 
 
 def mostrar_menu():
-    print("\nElige la operación a realizar:")
-    print("1. Suma")
-    print("2. Resta")
-    print("3. Multiplicación")
+    print("\nQue operación quieres realizar para estas matrices:")
+    print("1. Una Suma")
+    print("2. Una Resta")
+    print("3. Una Multiplicación")
     return input("Opción: ")
 
 
